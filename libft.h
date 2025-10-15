@@ -1,6 +1,8 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
+#include <stddef.h>
+
 int ft_isalnum (char c);
 int ft_strlen(const char *str);
 int ft_isprint(int c);

@@ -6,10 +6,11 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:34:36 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/15 00:04:19 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/16 00:27:31 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int ft_isalnum (int c)
 {
@@ -17,15 +18,3 @@ int ft_isalnum (int c)
                 return 1;
         return 0;
 }
-
-// int main(void){
-//         char b;
-//         printf("write a char: ");
-//         scanf("%c",&b);
-//         if(ft_isalnum(b) == 1)
-//         {
-//                 printf("this is a alpha-numeric char : %c",b);
-//         }
-//         else
-//                 printf("this isn't a alpha-numeric char");
-// }
