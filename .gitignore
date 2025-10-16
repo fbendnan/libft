@@ -1,0 +1,27 @@
+# Object files
+*.o
+
+# Executables
+libft.a
+test
+*.out
+*.exe
+
+# Backup files
+*~
+*.bak
+
+# Temporary files
+*.swp
+*.tmp
+
+# IDE/editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# MacOS system files
+.DS_Store
+
+# Logs
+*.log
