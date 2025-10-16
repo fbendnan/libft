@@ -25,3 +25,5 @@ test
 
 # Logs
 *.log
+
+main.c
