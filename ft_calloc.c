@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:58:14 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/21 23:35:15 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/22 13:15:25 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ void *ft_calloc(size_t nmemb, size_t size){
     ft_bzero(ptr, totalSize);
     return ptr;
 }
+

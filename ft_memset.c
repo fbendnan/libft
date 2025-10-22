@@ -6,19 +6,30 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 00:18:12 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/16 00:27:31 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/22 13:02:26 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n){
-    size_t i = 0;
-    unsigned char *ptr = (unsigned char *) s;
+// void *ft_memset(void *s, int c, size_t n){
+//     size_t i = 0;
+//     unsigned char *ptr = (unsigned char *) s;
 
-    while (i < n ){
-        ptr[i] = (unsigned char)c;
-        i++;
-    }
-    return s;
+//     while (i < n ){
+//         ptr[i] = (unsigned char)c;
+//         i++;
+//     }
+//     return s;
+// }
+
+
+int main(){
+    int tab[] = {1337, 2, 3, 4, 5};
+    char *s = (char *)&tab[0];
+    
+    memset(s, 1, 1);
+    memset(s+1, 0, 1);
+    printf("%d\n", tab[0]);
+
 }
