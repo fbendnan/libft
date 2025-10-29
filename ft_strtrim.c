@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:05:57 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 12:44:58 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:53:40 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,13 @@ char	*ft_strtrim(char const *s1, char const *set){
 		end--;
 	s1_cpy = malloc(end - start + 1);
 
-	// while (end > start + i)
-	// {
-	// 	s1_cpy[i] = s1[start + i];
-	// 	i++;
-	// }
-	// s1_cpy[start + i] = '\0';
+	while (end > start + i)
+	{
+		s1_cpy[i] = s1[start + i];
+		i++;
+	}
+	s1_cpy[start + i] = '\0';
 
-	ft_strlcat(s1_cpy, s1 + start, end - start);
 	return (s1_cpy);
 }
 
