@@ -6,60 +6,67 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 11:36:08 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 11:57:20 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:13:34 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t count_number_len(int n)
+static size_t	count_number_len(long	n)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
+	else if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
 	while (n > 0)
 	{
 		n = n / 10;
 		len++;
 	}
-	return len;
+	return (len);
 }
 
-char *ft_itoa(int n){
+static void	ft_fill_string(char	*str, int	len_n, long	n)
+{
+	if (n == 0)
+		str[0] = '0';
+	while (n > 9)
+	{
+		str[--len_n] = (n % 10) + '0';
+		n = n / 10;
+	}
+	str[--len_n] = n + '0';
+}
+
+char *ft_itoa(int	n)
+{
 	size_t 	len_n;
 	char	*str;
-	size_t  i;
-	short sign;
+	long	nb;
 
-	i = 0;
-	sign = 1;
-	if (n < 0)
-	{
-		sign = -1;
-		n = -n;
-	}
-	len_n = count_number_len(n);
+	nb	=	n;
+	len_n = count_number_len(nb);
 	str = malloc(len_n * sizeof(char) + 1);
-	
-	if(!str)
+	if (!str)
 		return (NULL);
-	str[len_n + 1] = '\0';
-	while (len_n >= 1)
+	if (nb < 0)
 	{
-		str[len_n] = (n % 10) + '0';
-		n = n / 10;
-		len_n--;
+		str[0] = '-';
+		nb = -nb;
 	}
-	if(sign == -1)
-		str[len_n] = '-';
-	else
-		str[len_n] = '+';
-	return str;
+	str[len_n] = '\0';
+	ft_fill_string(str, len_n, nb);
+	return (str);
 }
 
-
-#include <stdio.h>
-int main()
-{
-	 printf("%s", ft_itoa(-12378804));
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	 printf("%s", ft_itoa(-2135644442));
+// }

@@ -6,15 +6,15 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:34:45 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/16 00:27:31 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:36:24 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit (int c)
+int	ft_isdigit(int	c)
 {
-        if(c <= 57 && c >= 48)
-                return 1;
-        return 0;
+	if(c <= 57 && c >= 48)
+		return (1);
+	return (0);
 }

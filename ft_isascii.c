@@ -6,14 +6,15 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:54:52 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/16 00:27:31 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:34:49 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int a){
+int	ft_isascii(int	a)
+{
 	if(a >= 0 && a <= 127)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
