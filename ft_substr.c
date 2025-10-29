@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 11:15:29 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/22 12:23:02 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 12:46:20 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len){
     char *str;
 
     if(!s)
-        return NULL;
-
+        return (NULL);
     size_t len_s = ft_strlen(s);
 
     if(start > len_s)
@@ -34,6 +33,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len){
         i++;
     }    
     str[i] = '\0';
-
-    return str;
+    return (str);
 }
