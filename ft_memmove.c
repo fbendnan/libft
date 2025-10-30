@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:33:38 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 11:25:05 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 14:22:41 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ void *ft_memmove(void	*dest, const void	*src, size_t	len)
 	}
 	return (dest);
 }
-
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main()
 {
@@ -50,9 +49,9 @@ int main()
 	char *c = memmove(s, s, 3);
 	printf("%s \n", c);
 
-	// 	char *s = "hello world";
-	// char *c = memmove("hello world", "hello world", 3);
-	// printf("%s \n", c);
-	// char *h = ft_memmove(s, s, 3);
-	// printf("%s", h);
-}
+	 	char *s = "hello world";
+	 char *c = memmove("hello world", "hello world", 3);
+	 printf("%s \n", c);
+	 char *h = ft_memmove(s, s, 3);
+	 printf("%s", h);
+}*/
