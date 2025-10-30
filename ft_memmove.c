@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:33:38 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 22:59:38 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:57:29 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char *str = "hello world";
-// 	char str2[10];
-// 	printf("%s", (char*)ft_memmove(str2, str, 5));
-// }

@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:07:49 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 21:08:05 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:55:58 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	len_s = ft_strlen(s);
-	if (start > len_s)
-		return (NULL);
+	if (start >= len_s)
+		return (ft_strdup(""));
 	if (len > len_s - start)
 		len = len_s - start;
 	str = malloc(len + 1);

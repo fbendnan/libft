@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 11:36:08 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 20:42:49 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:58:31 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,3 @@ char	*ft_itoa(int n)
 	ft_fill_string(str, len_n, nb);
 	return (str);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	 printf("%s", ft_itoa(-2135644442));
-// }
