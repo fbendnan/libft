@@ -6,13 +6,13 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:36:20 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 15:50:02 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 17:36:12 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char	*s, int	c)
 {
 	size_t len_s;
 
