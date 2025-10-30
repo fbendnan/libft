@@ -6,13 +6,13 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:50:41 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 22:19:40 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 21:16:09 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	ft_count_words(const char	*s, char	c)
+static	size_t	ft_count_words(const char *s, char c)
 {
 	short	inside_word;
 	size_t	words;
@@ -36,13 +36,13 @@ static	size_t	ft_count_words(const char	*s, char	c)
 	return (words);
 }
 
-static int	safe_malloc(char	**str, size_t	position, size_t	len)
+static int	safe_malloc(char **str, size_t position, size_t len)
 {
 	size_t	i;
 
 	i = 0;
 	str[position] = malloc(len + 1);
-	if(!(str[position]))
+	if (!(str[position]))
 	{
 		while (position > i)
 		{
@@ -55,7 +55,7 @@ static int	safe_malloc(char	**str, size_t	position, size_t	len)
 	return (1);
 }
 
-static	char	**ft_fill(char	**str, const char	*s, char	c)
+static	char	**ft_fill(char **str, const char *s, char c)
 {
 	size_t	len;
 	size_t	i;
@@ -65,9 +65,7 @@ static	char	**ft_fill(char	**str, const char	*s, char	c)
 	{
 		len = 0;
 		while (*s == c && *s)
-		{
 			s++;
-		}
 		while (*s != c && *s)
 		{
 			len++;
@@ -76,9 +74,7 @@ static	char	**ft_fill(char	**str, const char	*s, char	c)
 		if (len)
 		{
 			if (safe_malloc(str, i, len))
-			{
-				ft_strlcpy(str[i], s - len , len + 1);
-			}
+				ft_strlcpy(str[i], s - len, len + 1);
 			i++;
 		}
 	}
@@ -86,7 +82,7 @@ static	char	**ft_fill(char	**str, const char	*s, char	c)
 	return (str);
 }
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	words_num;
 	char	**str;

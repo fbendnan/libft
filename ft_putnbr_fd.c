@@ -6,13 +6,13 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 11:32:10 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 11:04:10 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:45:50 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int	n, int	fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{

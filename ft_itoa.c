@@ -6,13 +6,13 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 11:36:08 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 17:13:34 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:42:49 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_number_len(long	n)
+static	size_t	count_number_len(long n)
 {
 	size_t	len;
 
@@ -32,7 +32,7 @@ static size_t	count_number_len(long	n)
 	return (len);
 }
 
-static void	ft_fill_string(char	*str, int	len_n, long	n)
+static void	ft_fill_string(char *str, int len_n, long n)
 {
 	if (n == 0)
 		str[0] = '0';
@@ -44,13 +44,13 @@ static void	ft_fill_string(char	*str, int	len_n, long	n)
 	str[--len_n] = n + '0';
 }
 
-char *ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
-	size_t 	len_n;
+	size_t	len_n;
 	char	*str;
 	long	nb;
 
-	nb	=	n;
+	nb = n;
 	len_n = count_number_len(nb);
 	str = malloc(len_n * sizeof(char) + 1);
 	if (!str)

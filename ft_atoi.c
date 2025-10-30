@@ -6,21 +6,21 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:41:13 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 17:56:15 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 22:39:06 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static short	ft_isspace(char	c)
+static short	ft_isspace(char c)
 {
-	if ((c == ' ') || (c == '\t') || (c == '\n') || 
-		(c == '\r') || (c == '\v') || (c == '\f'))
+	if ((c == ' ') || (c == '\t') || (c == '\n')
+		|| (c == '\r') || (c == '\v') || (c == '\f'))
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(const char	*nptr)
+int	ft_atoi(const char *nptr)
 {
 	int		i;
 	long	n;
@@ -45,12 +45,3 @@ int	ft_atoi(const char	*nptr)
 	}
 	return ((int)(n * sign));
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main()
-// {
-// 	char *str = "2147483649";
-// 	printf("%d\n" , atoi(str));
-// 	printf("%d" , ft_atoi(str));
-// }
