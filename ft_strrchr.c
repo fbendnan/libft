@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:36:20 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/30 17:36:12 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:04:29 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strrchr(const char	*s, int	c)
 	len_s = ft_strlen(s);
 		if((char) c == '\0')
 			return ((char	*)(s + len_s));
-		while (len_s >= 0)
+		while (len_s > 0)
 		{
-			if(*(s + len_s) == (char)c)
-				return ((char	*)(s + len_s));
+			if(*(s + len_s - 1) == (char)c)
+				return ((char	*)(s + len_s - 1));
 			len_s--;
 		}
 		return (NULL);
