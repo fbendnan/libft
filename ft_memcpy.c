@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 00:38:00 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 17:20:41 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:58:11 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ void *ft_memcpy(void	*dest, const void	*src, size_t	n)
 	size_t	i;
 
 	i = 0;
-	if(!dest && !src)
+	if (!dest && !src)
 		return(NULL);
-	while(i < n){
+	while (i < n)
+	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}

@@ -13,11 +13,12 @@ ft_calloc.c ft_itoa.c ft_putchar_fd.c ft_strdup.c ft_strmapi.c ft_tolower.c\
 ft_isalnum.c ft_memchr.c ft_putendl_fd.c ft_striteri.c ft_strncmp.c\
 ft_toupper.c ft_isalpha.c ft_memcmp.c ft_putnbr_fd.c ft_strjoin.c ft_strnstr.c
 
-OBJS = $(SRCS:.c = .o)
+OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 %.o : %.c 
 	$(CC) -c $(CFLAGS) $< -o $@ 

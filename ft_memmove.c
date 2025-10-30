@@ -6,24 +6,26 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:33:38 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/23 09:32:58 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:25:05 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n){
-	size_t i = 0;
+void *ft_memmove(void	*dest, const void	*src, size_t	len)
+{
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	unsigned char *d = dest;
-	unsigned char *s =(unsigned char *) src;
-
-	if(!dest && !src)
-		return(NULL);
-
-	if(d <= s)
+	i = 0;
+	d = dest;
+	s = (unsigned char *)src;
+	if ((!dest && !src))
+		return (NULL);
+	if (d <= s)
 	{
-		while(i < n)
+		while (i < len)
 		{
 			d[i] = s[i];
 			i++;
@@ -31,11 +33,26 @@ void *ft_memmove(void *dest, const void *src, size_t n){
 	}
 	else
 	{
-		while (i < n )
+		while (i < len )
 		{
-			d[n-1] = s[n-1];
-			n--;
+			d[len-1] = s[len-1];
+			len--;
 		}
 	}
 	return (dest);
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char *s = "hello world";
+	char *c = memmove(s, s, 3);
+	printf("%s \n", c);
+
+	// 	char *s = "hello world";
+	// char *c = memmove("hello world", "hello world", 3);
+	// printf("%s \n", c);
+	// char *h = ft_memmove(s, s, 3);
+	// printf("%s", h);
 }

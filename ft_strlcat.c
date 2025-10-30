@@ -6,7 +6,7 @@
 /*   By: fbendnan <fbendnan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:31:06 by fbendnan          #+#    #+#             */
-/*   Updated: 2025/10/29 12:33:29 by fbendnan         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:23:12 by fbendnan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ size_t ft_strlcat(char *dst, const char *src, size_t size){
 
 	if(size <= dst_len)
 		return (src_len + dst_len);
-		while(src[i] && size - 1 >= i + dst_len )
-		{
-			dst[dst_len + i] = src[i];
-			i++;
-		}
-		dst[dst_len + i] = '\0';
+	while(src[i] && size - 1 >= i + dst_len )
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
 	return (src_len + dst_len);
 }
